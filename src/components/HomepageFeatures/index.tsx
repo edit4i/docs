@@ -11,32 +11,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
+    title: 'edit4i Editor Documentation',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Complete documentation for the edit4i Editor Beta. Learn how to use our
+        AI-powered editor to supercharge your development workflow.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Platform Documentation (Coming Soon)',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        Documentation for the full edit4i platform, including advanced AI features,
+        collaboration tools, and cloud development environment.
+      </>
+    ),
+  },
+  {
+    title: 'API Reference (Coming Soon)',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Comprehensive API documentation for integrating with edit4i's services
+        and extending the platform's capabilities.
       </>
     ),
   },

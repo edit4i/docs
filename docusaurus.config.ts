@@ -75,7 +75,7 @@ const config: Config = {
       items: [
         {
           type: "doc",
-          docId: "editor/markdown-features",
+          docId: "editor/index",
           position: "left",
           label: "Editor",
         },

@@ -6,25 +6,91 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #0C8AC3;
+  --ifm-color-primary-dark: #0B7EB3;
+  --ifm-color-primary-darker: #0A72A3;
+  --ifm-color-primary-darkest: #096A94;
+  --ifm-color-primary-light: #0EA5E9;
+  --ifm-color-primary-lighter: #23AFED;
+  --ifm-color-primary-lightest: #39B9EF;
+  --ifm-background-color: #FFFFFF;
+  --ifm-background-surface-color: #FFFFFF;
+  --ifm-color-content: #1F2937;
+  --ifm-heading-color: #111827;
+  --ifm-navbar-background-color: #FFFFFF;
+  --ifm-footer-background-color: #F9FAFB;
+  --ifm-menu-color: #4B5563;
+  --ifm-menu-color-active: #111827;
+  --ifm-toc-link-color: #4B5563;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #0EA5E9;
+  --ifm-color-primary-dark: #0C8AC3;
+  --ifm-color-primary-darker: #0B7EB3;
+  --ifm-color-primary-darkest: #096A94;
+  --ifm-color-primary-light: #23AFED;
+  --ifm-color-primary-lighter: #39B9EF;
+  --ifm-color-primary-lightest: #5CC5F2;
+  --ifm-background-color: #1A1E24;
+  --ifm-background-surface-color: #1A1E24;
+  --ifm-color-content: #E2E8F0;
+  --ifm-heading-color: #FFFFFF;
+  --ifm-navbar-background-color: #1A1E24;
+  --ifm-footer-background-color: #1A1E24;
+  --ifm-menu-color: #E2E8F0;
+  --ifm-menu-color-active: #FFFFFF;
+  --ifm-toc-link-color: #E2E8F0;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Styles for both modes */
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.footer {
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+/* Fix icon colors */
+.navbar__toggle,
+.navbar__item,
+.menu__link,
+.table-of-contents__link,
+.theme-edit-this-page,
+.pagination-nav__link,
+.theme-doc-sidebar-item-link,
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible .menu__link,
+.clean-btn,
+.theme-doc-sidebar-menu .menu__link {
+  color: var(--ifm-menu-color);
+}
+
+.navbar__toggle:hover,
+.navbar__item:hover,
+.menu__link:hover,
+.table-of-contents__link:hover,
+.theme-edit-this-page:hover,
+.pagination-nav__link:hover,
+.theme-doc-sidebar-item-link:hover,
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible .menu__link:hover,
+.clean-btn:hover {
+  color: var(--ifm-color-primary);
+}
+
+.navbar__toggle svg,
+.menu__link svg,
+.navbar__item svg,
+.clean-btn svg {
+  color: var(--ifm-menu-color);
+}
+
+.menu__link--active {
+  color: var(--ifm-color-primary) !important;
+}
+
+.menu__link--active svg {
+  color: var(--ifm-color-primary) !important;
 }

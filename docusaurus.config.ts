@@ -31,6 +31,14 @@ const config: Config = {
     locales: ["en"],
   },
 
+  themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+  },
+
   presets: [
     [
       "classic",

@@ -2,27 +2,31 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { Pen, Blocks, Webhook } from 'lucide-react';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Icon: React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
+  link?: string;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'edit4i Editor Documentation',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Icon: Pen,
     description: (
       <>
         Complete documentation for the edit4i Editor Beta. Learn how to use our
         AI-powered editor to supercharge your development workflow.
       </>
     ),
+    link: '/docs/editor',
   },
   {
     title: 'Platform Documentation (Coming Soon)',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Icon: Blocks,
     description: (
       <>
         Documentation for the full edit4i platform, including advanced AI features,
@@ -32,7 +36,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'API Reference (Coming Soon)',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Icon: Webhook,
     description: (
       <>
         Comprehensive API documentation for integrating with edit4i's services
@@ -42,15 +46,22 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Icon, description, link}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <div className={styles.featureCard}>
+      <div className={styles.featureIcon}>
+        <Icon className={styles.featureSvg} size={40} strokeWidth={1.5} />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className={styles.featureContent}>
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
+        {link && (
+          <Link
+            className={styles.featureButton}
+            to={link}>
+            View Documentation →
+          </Link>
+        )}
       </div>
     </div>
   );
@@ -60,7 +71,7 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className={styles.featureContainer}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

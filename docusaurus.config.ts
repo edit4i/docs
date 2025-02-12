@@ -31,14 +31,6 @@ const config: Config = {
     locales: ["en"],
   },
 
-  themeConfig: {
-    colorMode: {
-      defaultMode: 'dark',
-      disableSwitch: false,
-      respectPrefersColorScheme: true,
-    },
-  },
-
   presets: [
     [
       "classic",
@@ -82,14 +74,14 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          type: "doc",
+          docId: "editor/markdown-features",
           position: "left",
-          label: "Tutorial",
+          label: "Editor",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/edit4i/docs",
           label: "GitHub",
           position: "right",
         },

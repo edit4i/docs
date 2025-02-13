@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Edit4i docs",
   tagline: "The Future of AI Development",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.png",
 
   // Set the production url of your site here
   url: "https://docs.edit4i.com/",
@@ -55,8 +55,8 @@ const config: Config = {
     navbar: {
       title: "Edit4i",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "Edit4i Logo",
+        src: "img/logo.png",
       },
       items: [
         {
